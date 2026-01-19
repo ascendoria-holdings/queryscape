@@ -1,0 +1,25 @@
+{
+  "name": "@queryscape/demo-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Demo web application for Queryscape",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "clean": "rm -rf dist",
+    "dev": "vite",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@queryscape/connectors": "workspace:*",
+    "@queryscape/core": "workspace:*",
+    "@queryscape/renderer-cytoscape": "workspace:*",
+    "cytoscape": "^3.28.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
+  }
+}

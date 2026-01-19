@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/connectors" },
+    { "path": "./packages/renderer-cytoscape" },
+    { "path": "./packages/cli" },
+    { "path": "./apps/demo-web" }
+  ],
+  "include": [],
+  "exclude": ["node_modules", "dist", "rust"]
+}

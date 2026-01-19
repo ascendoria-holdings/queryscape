@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+*.tsbuildinfo
+
+# IDE
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Test coverage
+coverage/
+
+# Rust
+rust/accelerator/target/
+
+# OS
+Thumbs.db

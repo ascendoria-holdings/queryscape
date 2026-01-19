@@ -1,0 +1,43 @@
+{
+  "name": "@queryscape/renderer-cytoscape",
+  "version": "0.1.0",
+  "description": "Cytoscape.js renderer for Queryscape",
+  "keywords": ["graph", "visualization", "cytoscape", "renderer"],
+  "license": "MIT",
+  "author": "Queryscape Contributors",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@queryscape/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "cytoscape": "^3.28.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "cytoscape": "^3.28.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

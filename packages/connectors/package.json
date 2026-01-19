@@ -1,0 +1,58 @@
+{
+  "name": "@queryscape/connectors",
+  "version": "0.1.0",
+  "description": "Database connectors for Queryscape",
+  "keywords": ["graph", "connector", "neo4j", "neptune", "cosmos", "sparql"],
+  "license": "MIT",
+  "author": "Queryscape Contributors",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./mock": {
+      "types": "./dist/mock/index.d.ts",
+      "import": "./dist/mock/index.js",
+      "require": "./dist/mock/index.cjs"
+    },
+    "./neo4j": {
+      "types": "./dist/neo4j/index.d.ts",
+      "import": "./dist/neo4j/index.js",
+      "require": "./dist/neo4j/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@queryscape/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "neo4j-driver": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "neo4j-driver": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "neo4j-driver": "^5.17.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

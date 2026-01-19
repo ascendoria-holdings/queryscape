@@ -1,0 +1,70 @@
+{
+  "name": "queryscape",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Cross-platform graph database visualization toolkit",
+  "keywords": [
+    "graph",
+    "database",
+    "visualization",
+    "cytoscape",
+    "neo4j",
+    "neptune",
+    "cosmos",
+    "sparql"
+  ],
+  "homepage": "https://github.com/queryscape/queryscape#readme",
+  "bugs": {
+    "url": "https://github.com/queryscape/queryscape/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/queryscape/queryscape.git"
+  },
+  "license": "MIT",
+  "author": "Queryscape Contributors",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "changeset": "changeset",
+    "clean": "pnpm -r clean && rm -rf node_modules",
+    "demo": "pnpm --filter @queryscape/demo-web dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky || true",
+    "release": "pnpm build && changeset publish",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.10",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "globals": "^15.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.3.3",
+    "vitest": "^2.0.0"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}
