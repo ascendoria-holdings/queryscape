@@ -1,9 +1,9 @@
 /**
- * Typed error hierarchy for Queryscape
+ * Typed error hierarchy for QueryScape
  */
 
-/** Base error class for all Queryscape errors */
-export abstract class QueryscapeError extends Error {
+/** Base error class for all QueryScape errors */
+export abstract class QueryScapeError extends Error {
   public abstract readonly code: string;
   public readonly timestamp: Date;
 
@@ -30,7 +30,7 @@ export abstract class QueryscapeError extends Error {
 }
 
 /** Connection-related errors */
-export class ConnectionError extends QueryscapeError {
+export class ConnectionError extends QueryScapeError {
   public readonly code = "CONNECTION_ERROR";
 
   constructor(
@@ -44,7 +44,7 @@ export class ConnectionError extends QueryscapeError {
 }
 
 /** Authentication errors */
-export class AuthError extends QueryscapeError {
+export class AuthError extends QueryScapeError {
   public readonly code = "AUTH_ERROR";
 
   constructor(message: string, options?: ErrorOptions) {
@@ -53,7 +53,7 @@ export class AuthError extends QueryscapeError {
 }
 
 /** Rate limiting errors */
-export class RateLimitError extends QueryscapeError {
+export class RateLimitError extends QueryScapeError {
   public readonly code = "RATE_LIMIT_ERROR";
 
   constructor(
@@ -66,7 +66,7 @@ export class RateLimitError extends QueryscapeError {
 }
 
 /** Query-related errors */
-export class QueryError extends QueryscapeError {
+export class QueryError extends QueryScapeError {
   public readonly code = "QUERY_ERROR";
 
   constructor(
@@ -79,7 +79,7 @@ export class QueryError extends QueryscapeError {
 }
 
 /** Query not supported by connector */
-export class QueryNotSupportedError extends QueryscapeError {
+export class QueryNotSupportedError extends QueryScapeError {
   public readonly code = "QUERY_NOT_SUPPORTED";
 
   constructor(
@@ -92,7 +92,7 @@ export class QueryNotSupportedError extends QueryscapeError {
 }
 
 /** Limit exceeded errors */
-export class LimitExceededError extends QueryscapeError {
+export class LimitExceededError extends QueryScapeError {
   public readonly code = "LIMIT_EXCEEDED";
 
   constructor(
@@ -107,7 +107,7 @@ export class LimitExceededError extends QueryscapeError {
 }
 
 /** Validation errors */
-export class ValidationError extends QueryscapeError {
+export class ValidationError extends QueryScapeError {
   public readonly code = "VALIDATION_ERROR";
 
   constructor(
@@ -120,7 +120,7 @@ export class ValidationError extends QueryscapeError {
 }
 
 /** Configuration errors */
-export class ConfigError extends QueryscapeError {
+export class ConfigError extends QueryScapeError {
   public readonly code = "CONFIG_ERROR";
 
   constructor(
@@ -133,7 +133,7 @@ export class ConfigError extends QueryscapeError {
 }
 
 /** Accelerator (Rust sidecar) errors */
-export class AcceleratorError extends QueryscapeError {
+export class AcceleratorError extends QueryScapeError {
   public readonly code: string = "ACCELERATOR_ERROR";
 
   constructor(
@@ -154,14 +154,14 @@ export class AcceleratorUnavailableError extends AcceleratorError {
   }
 }
 
-/** Type guard for QueryscapeError */
-export function isQueryscapeError(error: unknown): error is QueryscapeError {
-  return error instanceof QueryscapeError;
+/** Type guard for QueryScapeError */
+export function isQueryScapeError(error: unknown): error is QueryScapeError {
+  return error instanceof QueryScapeError;
 }
 
 /** Get error code safely */
 export function getErrorCode(error: unknown): string {
-  if (isQueryscapeError(error)) {
+  if (isQueryScapeError(error)) {
     return error.code;
   }
   return "UNKNOWN_ERROR";

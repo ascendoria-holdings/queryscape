@@ -1,5 +1,5 @@
 /**
- * Queryscape Demo Application
+ * QueryScape Demo Application
  */
 
 
@@ -69,7 +69,7 @@ async function init(): Promise<void> {
       data: session.getData(),
       theme: {
         nodeSize: 35,
-        fontSize: 11,
+        fontSize: 8,
       },
       layout: {
         algorithm: "cose",

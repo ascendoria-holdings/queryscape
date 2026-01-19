@@ -2,7 +2,7 @@
 
 ## Overview
 
-Queryscape is designed to connect to production graph databases. This document outlines security best practices for safe usage.
+QueryScape is designed to connect to production graph databases. This document outlines security best practices for safe usage.
 
 ## Credential Management
 
@@ -231,7 +231,7 @@ pnpm update
 
 ### Minimal Dependencies
 
-Queryscape uses minimal dependencies to reduce attack surface:
+QueryScape uses minimal dependencies to reduce attack surface:
 
 | Package | Dependencies |
 |---------|--------------|

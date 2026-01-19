@@ -1,5 +1,5 @@
 /**
- * Queryscape Cytoscape Renderer
+ * QueryScape Cytoscape Renderer
  */
 
 export * from "./renderer.js";

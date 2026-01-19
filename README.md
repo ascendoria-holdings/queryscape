@@ -1,4 +1,4 @@
-# Queryscape
+# QueryScape
 
 A lightweight, cross-platform graph database visualization toolkit built on Cytoscape.js.
 

@@ -1,10 +1,10 @@
 {
   "name": "@queryscape/renderer-cytoscape",
   "version": "0.1.0",
-  "description": "Cytoscape.js renderer for Queryscape",
+  "description": "Cytoscape.js renderer for QueryScape",
   "keywords": ["graph", "visualization", "cytoscape", "renderer"],
   "license": "MIT",
-  "author": "Queryscape Contributors",
+  "author": "QueryScape Contributors",
   "type": "module",
   "exports": {
     ".": {

@@ -1,10 +1,10 @@
 {
   "name": "@queryscape/cli",
   "version": "0.1.0",
-  "description": "CLI tool for Queryscape",
+  "description": "CLI tool for QueryScape",
   "keywords": ["graph", "cli", "visualization"],
   "license": "MIT",
-  "author": "Queryscape Contributors",
+  "author": "QueryScape Contributors",
   "type": "module",
   "bin": {
     "queryscape": "./dist/index.js"

@@ -1,10 +1,10 @@
 {
   "name": "@queryscape/core",
   "version": "0.1.0",
-  "description": "Core graph session, caching, and query model for Queryscape",
+  "description": "Core graph session, caching, and query model for QueryScape",
   "keywords": ["graph", "session", "cache", "query"],
   "license": "MIT",
-  "author": "Queryscape Contributors",
+  "author": "QueryScape Contributors",
   "type": "module",
   "exports": {
     ".": {

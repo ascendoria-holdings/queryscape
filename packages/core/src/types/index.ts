@@ -1,5 +1,5 @@
 /**
- * Core type definitions for Queryscape
+ * Core type definitions for QueryScape
  */
 
 /** Unique identifier for graph elements */

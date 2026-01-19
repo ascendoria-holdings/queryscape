@@ -1,4 +1,4 @@
-//! GraphScope Accelerator Library
+//! QueryScape Accelerator Library
 
 pub mod protocol;
 pub mod sampling;

@@ -1,8 +1,8 @@
-# Queryscape Architecture
+# QueryScape Architecture
 
 ## Overview
 
-Queryscape is a modular graph visualization toolkit designed for exploring large graph databases. It follows a connector-based architecture that abstracts database-specific implementations behind a unified query interface.
+QueryScape is a modular graph visualization toolkit designed for exploring large graph databases. It follows a connector-based architecture that abstracts database-specific implementations behind a unified query interface.
 
 ## Design Principles
 

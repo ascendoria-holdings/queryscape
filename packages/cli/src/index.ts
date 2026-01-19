@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Queryscape CLI entry point
+ * QueryScape CLI entry point
  */
 
 import { connect } from "./commands/connect.js";

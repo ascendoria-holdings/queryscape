@@ -1,11 +1,11 @@
 [package]
-name = "graphscope-accelerator"
+name = "queryscape-accelerator"
 version = "0.1.0"
 edition = "2021"
-authors = ["GraphScope Contributors"]
-description = "Rust accelerator sidecar for GraphScope"
+authors = ["QueryScape Contributors"]
+description = "Rust accelerator sidecar for QueryScape"
 license = "MIT"
-repository = "https://github.com/graphscope/graphscope"
+repository = "https://github.com/ascendoria-holdings/queryscape"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }

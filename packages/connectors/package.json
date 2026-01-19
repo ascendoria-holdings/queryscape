@@ -1,10 +1,10 @@
 {
   "name": "@queryscape/connectors",
   "version": "0.1.0",
-  "description": "Database connectors for Queryscape",
+  "description": "Database connectors for QueryScape",
   "keywords": ["graph", "connector", "neo4j", "neptune", "cosmos", "sparql"],
   "license": "MIT",
-  "author": "Queryscape Contributors",
+  "author": "QueryScape Contributors",
   "type": "module",
   "exports": {
     ".": {

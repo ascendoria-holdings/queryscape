@@ -1,6 +1,6 @@
-# Contributing to Queryscape
+# Contributing to QueryScape
 
-Thank you for your interest in contributing to Queryscape!
+Thank you for your interest in contributing to QueryScape!
 
 ## Getting Started
 

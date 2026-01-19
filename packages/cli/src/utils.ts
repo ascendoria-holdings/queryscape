@@ -60,7 +60,7 @@ export function parseArgs(args: string[]): {
 /** Print help message */
 export function printHelp(): void {
   const help = `
-Queryscape CLI
+QueryScape CLI
 
 Usage:
   queryscape <command> [options]

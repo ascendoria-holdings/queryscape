@@ -22,7 +22,7 @@
     "url": "git+https://github.com/ascendoria-holdings/queryscape.git"
   },
   "license": "MIT",
-  "author": "Queryscape Contributors",
+  "author": "QueryScape Contributors",
   "type": "module",
   "scripts": {
     "build": "pnpm -r build",

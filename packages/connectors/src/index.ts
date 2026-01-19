@@ -1,5 +1,5 @@
 /**
- * Queryscape Connectors
+ * QueryScape Connectors
  */
 
 export * from "./interface.js";

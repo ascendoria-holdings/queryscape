@@ -1,10 +1,10 @@
-//! GraphScope Accelerator Sidecar
+//! QueryScape Accelerator Sidecar
 //!
 //! A JSON-RPC server that provides accelerated graph operations.
 //! Communicates over stdin/stdout for easy integration with Node.js.
 
-use graphscope_accelerator::protocol::*;
-use graphscope_accelerator::sampling;
+use queryscape_accelerator::protocol::*;
+use queryscape_accelerator::sampling;
 use std::io::{self, BufRead, Write};
 
 fn handle_request(request: &Request) -> Result<String, String> {
@@ -67,7 +67,7 @@ fn main() {
     let stdin = io::stdin();
     let mut stdout = io::stdout();
 
-    eprintln!("GraphScope Accelerator v{} started", PROTOCOL_VERSION);
+    eprintln!("QueryScape Accelerator v{} started", PROTOCOL_VERSION);
 
     for line in stdin.lock().lines() {
         let line = match line {

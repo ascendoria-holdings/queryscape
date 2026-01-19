@@ -1,10 +1,10 @@
-# Queryscape Connectors
+# QueryScape Connectors
 
 This document describes the connector architecture and how to implement custom connectors.
 
 ## Overview
 
-Connectors provide a unified interface for querying different graph databases. Each connector translates the Queryscape query model into database-specific queries.
+Connectors provide a unified interface for querying different graph databases. Each connector translates the QueryScape query model into database-specific queries.
 
 ## Available Connectors
 

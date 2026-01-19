@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GraphScope Demo</title>
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
-  <body>
-    <div id="app">
-      <header>
-        <h1>GraphScope Demo</h1>
-        <p>Interactive graph visualization toolkit</p>
-      </header>
 
-      <div class="controls">
-        <div class="search-box">
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Search nodes..."
-          />
-          <button id="search-btn">Search</button>
-          <button id="clear-search-btn">Clear</button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QueryScape Demo</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
 
-        <div class="actions">
-          <button id="sample-btn">Sample Random</button>
-          <button id="layout-btn">Re-layout</button>
-          <button id="fit-btn">Fit View</button>
-          <button id="clear-btn">Clear Session</button>
-        </div>
+<body>
+  <div id="app">
+    <header>
+      <h1>QueryScape Demo</h1>
+      <p>Interactive graph visualization toolkit</p>
+    </header>
 
-        <div class="stats" id="stats">
-          Nodes: 0 | Edges: 0
-        </div>
+    <div class="controls">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search nodes..." />
+        <button id="search-btn">Search</button>
+        <button id="clear-search-btn">Clear</button>
       </div>
 
-      <div class="main-content">
-        <div id="graph-container"></div>
+      <div class="actions">
+        <button id="sample-btn">Sample Random</button>
+        <button id="layout-btn">Re-layout</button>
+        <button id="fit-btn">Fit View</button>
+        <button id="clear-btn">Clear Session</button>
+      </div>
 
-        <div class="sidebar" id="sidebar">
-          <h3>Node Details</h3>
-          <div id="node-details">
-            <p class="hint">Click a node to see details</p>
-          </div>
-        </div>
+      <div class="stats" id="stats">
+        Nodes: 0 | Edges: 0
       </div>
     </div>
 
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <div class="main-content">
+      <div id="graph-container"></div>
+
+      <div class="sidebar" id="sidebar">
+        <h3>Node Details</h3>
+        <div id="node-details">
+          <p class="hint">Click a node to see details</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
