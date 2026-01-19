@@ -1,11 +1,25 @@
+import type { Core as CytoscapeCore } from 'cytoscape';
 import { describe, it, expect, vi } from 'vitest';
 
-import { LayoutManager } from './layout-manager';
 import type { LayoutName } from './layout-manager';
+import { LayoutManager } from './layout-manager';
+
+// Mock type for Cytoscape Core
+interface MockLayout {
+  run: ReturnType<typeof vi.fn>;
+  on: ReturnType<typeof vi.fn>;
+  stop: ReturnType<typeof vi.fn>;
+}
+
+interface MockCy {
+  layout: ReturnType<typeof vi.fn>;
+  stop: ReturnType<typeof vi.fn>;
+  _layoutMock: MockLayout;
+}
 
 // Mock Cytoscape Core
-const createMockCy = () => {
-  const layoutMock = {
+const createMockCy = (): MockCy => {
+  const layoutMock: MockLayout = {
     run: vi.fn(),
     on: vi.fn(),
     stop: vi.fn(),
@@ -22,7 +36,7 @@ describe('LayoutManager', () => {
   describe('run', () => {
     it('should run layout with default options', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       manager.run('cose');
 
@@ -32,7 +46,7 @@ describe('LayoutManager', () => {
 
     it('should pass layout name', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       manager.run('circle');
 
@@ -42,7 +56,7 @@ describe('LayoutManager', () => {
 
     it('should set animate option', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       manager.run('grid', { animate: false });
 
@@ -52,7 +66,7 @@ describe('LayoutManager', () => {
 
     it('should set animation duration', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       manager.run('cose', { animationDuration: 1000 });
 
@@ -62,7 +76,7 @@ describe('LayoutManager', () => {
 
     it('should register onComplete callback', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
       const onComplete = vi.fn();
 
       manager.run('cose', { onComplete });
@@ -72,7 +86,7 @@ describe('LayoutManager', () => {
 
     it('should update current layout', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       expect(manager.getCurrentLayout()).toBe('cose'); // default
 
@@ -83,7 +97,7 @@ describe('LayoutManager', () => {
 
     it('should merge custom options', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       manager.run('cose', {
         options: {
@@ -101,7 +115,7 @@ describe('LayoutManager', () => {
   describe('getCurrentLayout', () => {
     it('should return current layout name', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       manager.run('concentric');
       expect(manager.getCurrentLayout()).toBe('concentric');
@@ -114,7 +128,7 @@ describe('LayoutManager', () => {
   describe('getAvailableLayouts', () => {
     it('should return all available layout names', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       const layouts = manager.getAvailableLayouts();
 
@@ -131,7 +145,7 @@ describe('LayoutManager', () => {
   describe('stop', () => {
     it('should stop layout animation', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       manager.stop();
 
@@ -141,7 +155,7 @@ describe('LayoutManager', () => {
 
   describe('layout defaults', () => {
     const cy = createMockCy();
-    const manager = new LayoutManager(cy as any);
+    const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
     const layoutTests: LayoutName[] = ['cose', 'circle', 'grid', 'breadthfirst', 'concentric', 'random', 'preset'];
 
@@ -161,7 +175,7 @@ describe('LayoutManager', () => {
   describe('animation options', () => {
     it('should set animation easing', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       manager.run('cose', { animate: true });
 
@@ -171,7 +185,7 @@ describe('LayoutManager', () => {
 
     it('should use default duration when not specified', () => {
       const cy = createMockCy();
-      const manager = new LayoutManager(cy as any);
+      const manager = new LayoutManager(cy as unknown as CytoscapeCore);
 
       manager.run('circle');
 

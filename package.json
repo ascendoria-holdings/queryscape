@@ -13,13 +13,13 @@
     "cosmos",
     "sparql"
   ],
-  "homepage": "https://github.com/queryscape/queryscape#readme",
+  "homepage": "https://github.com/ascendoria-holdings/queryscape#readme",
   "bugs": {
-    "url": "https://github.com/queryscape/queryscape/issues"
+    "url": "https://github.com/ascendoria-holdings/queryscape/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/queryscape/queryscape.git"
+    "url": "git+https://github.com/ascendoria-holdings/queryscape.git"
   },
   "license": "MIT",
   "author": "Queryscape Contributors",

@@ -3,6 +3,7 @@
  */
 
 import type { GraphNode, GraphEdge, NodeId, EdgeId, PropertyValue, Graph } from '../types';
+
 import type { Patch, PatchOperation, PatchResult } from './patch-types';
 
 /**

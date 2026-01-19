@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 
 import type { Graph } from '../../types/graph';
+
 import { sampleRandomWalk } from './sampling';
 
 describe('sampleRandomWalk', () => {

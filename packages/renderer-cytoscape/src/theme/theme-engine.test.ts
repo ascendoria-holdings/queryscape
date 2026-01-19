@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 
-import { ThemeEngine } from './theme-engine';
 import { DEFAULT_THEME, DARK_THEME } from './default-theme';
+import { ThemeEngine } from './theme-engine';
 import type { Theme } from './theme-engine';
 
 describe('ThemeEngine', () => {

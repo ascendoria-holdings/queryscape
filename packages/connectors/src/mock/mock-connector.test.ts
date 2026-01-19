@@ -1,6 +1,6 @@
+import { QueryBuilder } from '@queryscape/core';
 import { describe, it, expect, beforeEach } from 'vitest';
 
-import { QueryBuilder } from '@queryscape/core';
 
 import { MockConnector } from './mock-connector';
 
@@ -186,7 +186,7 @@ describe('MockConnector', () => {
 
       expect(outgoing.ok).toBe(true);
       if (outgoing.ok) {
-        outgoing.value.graph.edges.forEach(edge => {
+        outgoing.value.graph.edges.forEach((_edge) => {
           // For outgoing from start node, edges should have start node as source
           // (or be between neighbors)
         });

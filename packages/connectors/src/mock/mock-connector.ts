@@ -154,9 +154,10 @@ export class MockConnector {
       }
 
       const executionTimeMs = performance.now() - startTime;
-      const limit = (query as any).limit ?? 100;
+      const limit = (query as { limit?: number }).limit ?? 100;
+      const offset = (query as { offset?: number }).offset ?? 0;
       const hasMore = query.type === 'node' || query.type === 'edge'
-        ? this.data.nodes.length > (query as any).offset + result.nodes.length
+        ? result.nodes.length === limit && this.data.nodes.length > offset + result.nodes.length
         : false;
 
       return {

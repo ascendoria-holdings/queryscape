@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 
 import type { Graph, GraphNode, GraphEdge } from '../types/graph';
+
 import { PatchEngine } from './patch-engine';
 
 describe('PatchEngine', () => {

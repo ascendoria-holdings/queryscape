@@ -1,0 +1,42 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      dev-dependencies:
+        patterns:
+          - "@types/*"
+          - "eslint*"
+          - "prettier"
+          - "typescript"
+          - "vitest"
+        update-types:
+          - minor
+          - patch
+      production-dependencies:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "@types/*"
+          - "eslint*"
+          - "prettier"
+          - "typescript"
+          - "vitest"
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: cargo
+    directory: /rust/accelerator
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5

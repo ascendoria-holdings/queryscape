@@ -4,6 +4,7 @@
  */
 
 import type { NodeId, PropertyValue } from '../types';
+
 import type {
   NodeQuery,
   EdgeQuery,

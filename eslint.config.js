@@ -15,6 +15,7 @@ export default [
       "**/*.js",
       "!eslint.config.js",
       "rust/**",
+      "vitest.workspace.ts",
       "**/*.config.ts",
     ],
   },
@@ -25,7 +26,14 @@ export default [
       parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
-        project: true,
+        project: [
+          "./packages/core/tsconfig.eslint.json",
+          "./packages/connectors/tsconfig.eslint.json",
+          "./packages/renderer-cytoscape/tsconfig.eslint.json",
+          "./packages/cli/tsconfig.json",
+          "./apps/demo-web/tsconfig.json",
+        ],
+        tsconfigRootDir: import.meta.dirname,
       },
       globals: {
         ...globals.node,

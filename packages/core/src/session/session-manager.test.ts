@@ -1,8 +1,9 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 
-import type { GraphNode, GraphEdge } from '../types/graph';
 import { SessionLimitError } from '../errors/error-types';
 import { PatchEngine } from '../patch/patch-engine';
+import type { GraphNode, GraphEdge } from '../types/graph';
+
 import { SessionManager } from './session-manager';
 
 describe('SessionManager', () => {

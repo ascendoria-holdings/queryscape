@@ -3,11 +3,11 @@
  * Maintains session state, enforces limits, and coordinates with cache and patch engine.
  */
 
-import type { Graph, GraphNode, GraphEdge, NodeId } from '../types';
-import type { Patch, PatchResult } from '../patch/patch-types';
-import { PatchEngine } from '../patch/patch-engine';
 import { CacheManager } from '../cache/cache-manager';
 import { SessionLimitError } from '../errors/error-types';
+import { PatchEngine } from '../patch/patch-engine';
+import type { Patch, PatchResult } from '../patch/patch-types';
+import type { Graph, GraphNode, GraphEdge, NodeId } from '../types';
 
 export interface SessionLimits {
   readonly maxNodes: number;
@@ -175,7 +175,7 @@ export class SessionManager {
     this.cache.set(key, result);
   }
 
-  getCacheStats() {
+  getCacheStats(): ReturnType<CacheManager['stats']> {
     return this.cache.stats();
   }
 
